@@ -1,7 +1,7 @@
 canvas {
-  height: 100vh !important;
+  height: 70vh !important;
 }
-body {
-  background-image: url("./clouds.jpg");
+.VirtualSimu {
+  background-image: url("./images/clouds.jpg");
   background-size: cover;
 }

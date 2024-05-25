@@ -5,6 +5,7 @@ import Plane from "./Plane"
 import { Leva } from "leva"
 import * as THREE from "three"
 import { simulateFault, mapFaultToCoordinates, findShortestPath } from "./utils"
+import "./VirtualSimuCAD.css"
 
 const wireProperties = [
   { length: 10, start: { x: -7, y: 5, z: 20 } },
@@ -111,7 +112,7 @@ function VirtualSimuCAD() {
   }, [pathPoints])
 
   return (
-    <>
+    <div className="VirtualSimu">
       <Leva />
       <div>
         <label htmlFor="wireLength" style={{ color: "#269bd6" }}>
@@ -138,7 +139,7 @@ function VirtualSimuCAD() {
           <option value="Fin 4">Fin 4</option>
         </select>
       </div>
-      <Canvas>
+      <Canvas className="ThreeD">
         <ambientLight intensity={2} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
         <pointLight position={[-5, -5, -5]} intensity={1} />
@@ -160,7 +161,7 @@ function VirtualSimuCAD() {
         <h5>The Red blinking sphere represents the position of the estimated wire fault.</h5>
         <h5>The Brown line between the green and red Sphere represents the shortest distance from Fin to wire fault.</h5>
       </div>
-    </>
+    </div>
   )
 }
 

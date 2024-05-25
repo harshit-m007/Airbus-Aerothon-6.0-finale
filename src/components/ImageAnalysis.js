@@ -120,7 +120,7 @@ function ImageAnalysis() {
           Analyze Image
         </button>
         {analysisResult && (
-          <div className="analysis-result">
+          <div className="image-result">
             <h2>Analysis Result</h2>
             <img src={`data:image/jpeg;base64,${analysisResult.result_image}`} alt="Result" className="result-image" />
           </div>

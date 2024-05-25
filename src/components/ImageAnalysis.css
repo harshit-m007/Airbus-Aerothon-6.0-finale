@@ -38,19 +38,24 @@
   background-color: #4c5865;
 }
 
-.analysis-result {
+.image-result {
   margin-top: 20px;
+  width: 200%;
 }
 
 .result-image {
-  max-width: 100%;
+  max-width: 30%;
   height: auto;
   border-radius: 5px;
+  height: 50vh;
+  width: 200vh;
 }
 
 .details-heading {
   color: #4c5865;
   margin-bottom: 10px;
+  float: left;
+  margin-left: 40%;
 }
 
 .analysis-table {

@@ -58,7 +58,7 @@ ul {
 
 .right-content {
   flex: 1;
-  text-align: center;
+  text-align: right;
 }
 
 .right-content img {
