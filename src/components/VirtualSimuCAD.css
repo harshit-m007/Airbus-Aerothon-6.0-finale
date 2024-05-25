@@ -1,0 +1,7 @@
+canvas {
+  height: 100vh !important;
+}
+body {
+  background-image: url("./clouds.jpg");
+  background-size: cover;
+}
