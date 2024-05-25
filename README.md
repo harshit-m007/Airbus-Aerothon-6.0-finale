@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Problem Statement 
+The safety of passengers, crew, and cargo is the highest priority in aviation. Any damage to the structural integrity of an aircraft, no matter how minor, poses a potential threat to safety. Issues such as dents or structural deformities can disrupt airflow, impair aerodynamics, and weaken critical structural elements, increasing the risk of catastrophic failures during flight. Faulty wiring is another significant safety risk, as it can lead to electrical malfunctions in essential aircraft systems. These malfunctions can result in system failures, in-flight emergencies, or even fires, putting passengers, crew, and the aircraft itself in jeopardy.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Therefore, thorough assessments and repairs are essential to maintaining the airworthiness of aircraft and ensuring safety against potential accidents.
 
-## Available Scripts
+## Techstack Used
 
-In the project directory, you can run:
+### `ReactJs`
+Frontend javascript framework/library
 
-### `npm start`
+### `AutoCAD Fusion 360`
+For CAD 3D Modelling of the aircraft
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `Python`
+For implementing Machine Learning algorithms and backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Flask`
+For development
 
-### `npm test`
+### `OpenCV and YoloV8`
+for image assessment and damage detection
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Drive link
+https://drive.google.com/drive/u/0/folders/1oxOvr5gn1QDR3C9UEWQCKVHQUxgjLvtg
 
-### `npm run build`
+## PPT Link
+https://docs.google.com/presentation/d/1PjUcvqxVJ_2WikHRVbk5eTUZwl-2aOdGdrS_xECJ0D4/edit?pli=1#slide=id.g2e015b802aa_1_0
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
