@@ -111,7 +111,7 @@ function ImageAnalysis() {
     }
   }
 
-  return (
+  return ( 
     <div className="analysis-container">
       <div className="left-content">
         <h1 className="analysis-heading">Image Analysis</h1>
