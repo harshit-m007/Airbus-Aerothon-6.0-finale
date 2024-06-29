@@ -2,7 +2,7 @@ import os
 import cv2
 import base64
 from ultralytics import YOLO
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import numpy as np
 import logging
@@ -18,6 +18,17 @@ model_path = os.path.join(os.path.dirname(__file__), 'modelfiles', 'best.pt')
 
 # Load the YOLO model
 model = YOLO(model_path)  # Path to your trained model
+
+frontend_folder = os.path.join(os.getcwd(),"..","AirBusFrontend")
+build_folder = os.path.join(frontend_folder,"build")
+#Server static files from build
+@app.route("/",defaults ={"filename":""})
+@app.route("/<path:filename>")
+def index(filename):
+    if not filename:
+        filename = "index.html"
+    return send_from_directory(build_folder,filename)
+
 
 @app.route('/image-analysis', methods=['POST'])
 def detect_damage():

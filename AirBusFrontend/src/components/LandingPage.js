@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./LandingPage.css" // Import the CSS file
-import Aeroearth from "./images/Aeroearth.jpg" // Import the image
+
 
 function LandingPage() {
   return (
@@ -30,7 +30,7 @@ function LandingPage() {
       </div>
       <div className="right-content">
         {" "}
-        <img src={Aeroearth} alt="Placeholder" />{" "}
+        <img src="https://t3.ftcdn.net/jpg/03/58/14/18/360_F_358141890_qe2F3KQhDL190vuu0E9w1GMypaSWCvIs.jpg" alt="Placeholder" />{" "}
       </div>
     </div>
   )
