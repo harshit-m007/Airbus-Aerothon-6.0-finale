@@ -28,7 +28,7 @@ class PriorityQueue {
 }
 
 export function simulateFault(wire, faultDistance) {
-  const { length, start } = wire
+  // const { length, start } = wire
   const propagation_velocity = 2.5e8 // Meters per second (example for coaxial cable)
   const pulse_width = 100
   const pulse = Array(pulse_width).fill(0)
@@ -48,7 +48,7 @@ export function simulateFault(wire, faultDistance) {
     }
   }
 
-  const measured_signal = pulse.map((v, i) => v + reflected_signal[i])
+  // const measured_signal = pulse.map((v, i) => v + reflected_signal[i])
   const travel_time_index = reflected_signal.indexOf(Math.max(...reflected_signal))
   const estimated_fault_distance = (travel_time_index * propagation_velocity) / (2 * pulse.length)
 
@@ -106,7 +106,7 @@ export function findShortestPath(start, target, graph) {
   while (!pq.isEmpty()) {
     const minNode = pq.dequeue().element
 
-    if (minNode == endNode) break
+    if (minNode === endNode) break
 
     for (let neighbor of graph[minNode]) {
       let dist = calculateDistance(convertKeyNotnToLocObjects(minNode), convertKeyNotnToLocObjects(neighbor))
