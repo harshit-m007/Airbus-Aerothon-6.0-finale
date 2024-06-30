@@ -18,7 +18,8 @@ headers = {
 response = requests.get('https://api.github.com/repos/ultralytics/assets/releases/tags/v8.2.0', headers=headers)
 app = Flask(__name__)
 
-CORS(app, resources={r"/*": {"origins": "https://aeroscan1.vercel.app"}})
+cors = CORS(app, resources={r"/detect_and_recommend": {"origins": "https://aeroscan1.vercel.app"}})
+cors = CORS(app, resources={r"/image-analysis": {"origins": "https://aeroscan1.vercel.app"}})
 
 
 # Configure logging
@@ -30,15 +31,15 @@ model_path = os.path.join(os.path.dirname(__file__), 'ModelFiles', 'best.pt')
 # Load the YOLO model
 model = YOLO(model_path)  # Path to your trained model
 
-frontend_folder = os.path.join(os.getcwd(),"..","AirBusFrontend")
-build_folder = os.path.join(frontend_folder,"build")
-#Server static files from build
-@app.route("/",defaults ={"filename":""})
-@app.route("/<path:filename>")
-def index(filename):
-    if not filename:
-        filename = "index.html"
-    return send_from_directory(build_folder,filename)
+# frontend_folder = os.path.join(os.getcwd(),"..","AirBusFrontend")
+# build_folder = os.path.join(frontend_folder,"build")
+# #Server static files from build
+# @app.route("/",defaults ={"filename":""})
+# @app.route("/<path:filename>")
+# def index(filename):
+#     if not filename:
+#         filename = "index.html"
+#     return send_from_directory(build_folder,filename)
 
 
 @app.route('/image-analysis', methods=['POST'])
