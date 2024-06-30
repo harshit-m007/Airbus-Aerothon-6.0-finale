@@ -43,7 +43,8 @@ model = YOLO(model_path)  # Path to your trained model
 
 
 @app.route('/image-analysis', methods=['POST'])
-@cross_origin(origin='https://aeroscan1-harshit-minhas-projects.vercel.app', headers=['Content-Type'])
+# @cross_origin(origin='*', headers=['Content-Type'])
+@cross_origin()
 def detect_damage():
     if 'image' not in request.files:
         logging.error("No image provided in the request.")
@@ -94,7 +95,9 @@ def detect_damage():
         logging.error(f"Error processing image: {e}")
         return jsonify({"error": "Error processing image"}), 500
 
-    return jsonify({"detections": detections, "result_image": img_base64})
+    response = jsonify({"detections": detections, "result_image": img_base64})
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    return response
 
 # Function to identify cracks and dents in an aircraft surface image
 def identify_cracks_and_dents(image, threshold_area=100):
