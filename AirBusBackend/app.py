@@ -18,8 +18,9 @@ headers = {
 response = requests.get('https://api.github.com/repos/ultralytics/assets/releases/tags/v8.2.0', headers=headers)
 app = Flask(__name__)
 
-cors = CORS(app, resources={r"/detect_and_recommend": {"origins": "https://aeroscan1.vercel.app"}})
-cors = CORS(app, resources={r"/image-analysis": {"origins": "https://aeroscan1.vercel.app"}})
+# cors = CORS(app, resources={r"/detect_and_recommend": {"origins": "https://aeroscan1.vercel.app"}})
+# cors = CORS(app, resources={r"/image-analysis": {"origins": "https://aeroscan1.vercel.app"}})
+CORS(app, resources={r"/image-analysis": {"origins": "*"}})
 
 
 # Configure logging
@@ -96,7 +97,7 @@ def detect_damage():
         return jsonify({"error": "Error processing image"}), 500
 
     response = jsonify({"detections": detections, "result_image": img_base64})
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    # response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization')
     return response
 
 # Function to identify cracks and dents in an aircraft surface image
