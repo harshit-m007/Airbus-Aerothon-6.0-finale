@@ -211,7 +211,7 @@ def detect_and_recommend():
 
     # Set CORS headers
     # response.headers.add('Access-Control-Allow-Origin', '*')
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    # response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
 
 
     return response
