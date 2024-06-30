@@ -43,7 +43,7 @@ model = YOLO(model_path)  # Path to your trained model
 
 
 @app.route('/image-analysis', methods=['POST'])
-@cross_origin()
+@cross_origin(origin='https://aeroscan1-harshit-minhas-projects.vercel.app', headers=['Content-Type'])
 def detect_damage():
     if 'image' not in request.files:
         logging.error("No image provided in the request.")
