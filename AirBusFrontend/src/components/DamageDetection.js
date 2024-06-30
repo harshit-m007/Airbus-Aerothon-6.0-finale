@@ -16,7 +16,7 @@ function DamageDetection() {
     formData.append("image", selectedImage)
 
     try {
-      const response = await axios.post("https://aero-scan.onrender.com/detect_and_recommend", formData, {
+      const response = await axios.post("https://aeroscan.onrender.com/detect_and_recommend", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }
