@@ -22,7 +22,7 @@ CORS(app)
 logging.basicConfig(level=logging.DEBUG)
 
 # Define the model path
-model_path = os.path.join(os.path.dirname(__file__), 'modelfiles', 'best.pt')
+model_path = os.path.join(os.path.dirname(__file__), 'ModelFiles', 'best.pt')
 
 # Load the YOLO model
 model = YOLO(model_path)  # Path to your trained model
