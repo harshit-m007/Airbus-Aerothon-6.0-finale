@@ -3,7 +3,7 @@ import cv2
 import base64
 from ultralytics import YOLO
 from flask import Flask, request, jsonify, send_from_directory
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 import numpy as np
 import logging
 import requests
@@ -45,7 +45,7 @@ model = YOLO(model_path)  # Path to your trained model
 
 @app.route('/image-analysis', methods=['POST'])
 # @cross_origin(origin='*', headers=['Content-Type'])
-@cross_origin()
+# @cross_origin()
 def detect_damage():
     if 'image' not in request.files:
         logging.error("No image provided in the request.")
@@ -180,7 +180,7 @@ def get_repair_recommendations(damage_details):
 
 # Endpoint for damage detection and repair recommendations
 @app.route('/detect_and_recommend', methods=['POST'])
-@cross_origin()
+# @cross_origin()
 def detect_and_recommend():
     if 'image' not in request.files:
         return jsonify({"error": "No image provided"}), 400
