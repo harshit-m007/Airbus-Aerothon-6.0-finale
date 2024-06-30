@@ -6,7 +6,15 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import numpy as np
 import logging
+import requests
 
+# Replace 'YOUR_TOKEN' with your actual GitHub personal access token
+headers = {
+    'Authorization': 'token YOUR_TOKEN',
+    'Accept': 'application/vnd.github.v3+json'
+}
+
+response = requests.get('https://api.github.com/repos/ultralytics/assets/releases/tags/v8.2.0', headers=headers)
 app = Flask(__name__)
 CORS(app)
 
