@@ -14,9 +14,12 @@ headers = {
     'Accept': 'application/vnd.github.v3+json'
 }
 
+
 response = requests.get('https://api.github.com/repos/ultralytics/assets/releases/tags/v8.2.0', headers=headers)
 app = Flask(__name__)
-CORS(app)
+
+CORS(app, resources={r"/*": {"origins": "https://aeroscan1.vercel.app"}})
+
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
