@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 # cors = CORS(app, resources={r"/detect_and_recommend": {"origins": "https://aeroscan1.vercel.app"}})
 # cors = CORS(app, resources={r"/image-analysis": {"origins": "https://aeroscan1.vercel.app"}})
-CORS(app)
+CORS(app,supports_credentials=True)
 
 
 # Configure logging
