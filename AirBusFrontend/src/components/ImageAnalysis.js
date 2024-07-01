@@ -100,7 +100,7 @@ function ImageAnalysis() {
     formData.append("image", selectedImage)
 
     try {
-      const response = await axios.post("https://aeroscan.onrender.com/image-analysis", formData, {
+      const response = await axios.post("https://aerothon-huc4.onrender.com/image-analysis", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }
