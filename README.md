@@ -17,7 +17,7 @@ For implementing Machine Learning algorithms and backend
 ### `Flask`
 For development
 
-### `OpenCV and YoloV8`
+### `OpenCV and YoloV9`
 for image assessment and damage detection
 
 ## Drive link
